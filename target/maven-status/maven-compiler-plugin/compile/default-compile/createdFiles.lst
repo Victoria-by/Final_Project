@@ -1,0 +1,13 @@
+framework\drivertype\WebDriverCreator.class
+framework\factory\RemoteWebDriverCreator.class
+pageobject\HomePage.class
+util\PropertiesReader.class
+framework\factory\LocalWebDriverCreator.class
+framework\drivertype\FirefoxDriverCreator.class
+pageobject\ComputersAndNetworksPage.class
+framework\SelenideWebDriverConfigurator.class
+navigation\OnlinerNavigation.class
+framework\drivertype\ChromeDriverCreator.class
+pageobject\CatalogPage.class
+framework\BasePage.class
+pageobject\AccessoriesPage.class

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: pajeobject.AllTests
+-------------------------------------------------------------------------------
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.966 s - in pajeobject.AllTests
