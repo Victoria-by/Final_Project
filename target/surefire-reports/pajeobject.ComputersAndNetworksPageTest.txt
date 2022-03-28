@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: pajeobject.ComputersAndNetworksPageTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.997 s - in pajeobject.ComputersAndNetworksPageTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.901 s - in pajeobject.ComputersAndNetworksPageTest

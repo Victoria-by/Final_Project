@@ -8,5 +8,5 @@ import org.junit.runners.Suite;
         CatalogPageTest.class,
         ComputersAndNetworksPageTest.class,
         AccessoriesPageTest.class})
-public class AllTests {
+public class AllTests extends BaseTest{
 }

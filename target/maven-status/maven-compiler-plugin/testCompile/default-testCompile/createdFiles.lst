@@ -1,4 +1,7 @@
 pajeobject\CatalogPageTest.class
 pajeobject\ComputersAndNetworksPageTest.class
+pajeobject\BaseTest.class
 pajeobject\AccessoriesPageTest.class
 pajeobject\AllTests.class
+utils\ScreenshotUtils.class
+listeners\AllureListener.class

@@ -45,6 +45,14 @@ public class AccessoriesPageTest {
                 .isTrue();
     }
 
+//    @Test
+//    public void testShouldBeFailed() {
+//        List<String> descriptions = accessoriesPage.findProductsDescription();
+//        assertThat(isDescriptionContainsWord(descriptions, " р."))
+//                .as("Not all products contain price")
+//                .isFalse();
+//    }
+
     public boolean isCollectionContainsNull(List<String> strings) {
         return strings.stream().anyMatch(e -> e.contains("null"));
     }
