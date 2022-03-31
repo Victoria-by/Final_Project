@@ -1,19 +1,21 @@
 package pajeobject;
 
+import io.qameta.allure.Description;
+import listeners.AllureListener;
 import navigation.OnlinerNavigation;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import pageobject.AccessoriesPage;
 
-import java.util.List;
+import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+@ExtendWith(AllureListener.class)
+public class AccessoriesPageTest extends BaseTest {
+    private static AccessoriesPage accessoriesPage;
 
-public class AccessoriesPageTest {
-
-    private static AccessoriesPage accessoriesPage = new AccessoriesPage();
-
-    @BeforeClass
+    @BeforeAll
+    @Description("Navigate to Onliner and click on 'Accessories' tab")
     public static void navigateToOnlinerFindAccessoriesTabAndClick() {
         accessoriesPage = OnlinerNavigation.navigateToOnlinerHomePage()
                 .clickOnNavigationHeaderLink("Каталог")
@@ -22,42 +24,34 @@ public class AccessoriesPageTest {
     }
 
     @Test
+    @Description("Test all elements contain name")
     public void testAllElementsContainName() {
-        List<String> productsNames = accessoriesPage.findProductsNames();
-        assertThat(!isCollectionContainsNull(productsNames))
+        assertThat(accessoriesPage.getProductsNames())
                 .as("Not all products contain name")
-                .isTrue();
+                .allMatch(e -> !e.isEmpty());
     }
 
     @Test
+    @Description("Test all elements contain quantity")
     public void testAllElementsContainQuantity() {
-        List<String> descriptions = accessoriesPage.findProductsDescription();
-        assertThat(isDescriptionContainsWord(descriptions, "товар"))
+        assertThat(accessoriesPage.getProductsDescription())
                 .as("Not all products contain quantity")
-                .isTrue();
+                .allMatch(e -> e.contains("товар"));
     }
 
     @Test
+    @Description("Test all elements contain price")
     public void testAllElementsContainPrice() {
-        List<String> descriptions = accessoriesPage.findProductsDescription();
-        assertThat(isDescriptionContainsWord(descriptions, " р."))
+        assertThat(accessoriesPage.getProductsDescription())
                 .as("Not all products contain price")
-                .isTrue();
+                .allMatch(e -> e.contains("р."));
     }
 
-//    @Test
-//    public void testShouldBeFailed() {
-//        List<String> descriptions = accessoriesPage.findProductsDescription();
-//        assertThat(isDescriptionContainsWord(descriptions, " р."))
-//                .as("Not all products contain price")
-//                .isFalse();
-//    }
-
-    public boolean isCollectionContainsNull(List<String> strings) {
-        return strings.stream().anyMatch(e -> e.contains("null"));
-    }
-
-    public boolean isDescriptionContainsWord(List<String> descriptions, String word) {
-        return descriptions.stream().allMatch(e -> e.contains(word));
+    @Test
+    @Description("Test should be failed")
+    public void testShouldBeFailed() {
+        assertThat(accessoriesPage.getProductsDescription())
+                .as("Not all products contain price")
+                .noneMatch(e -> e.contains("р."));
     }
 }

@@ -2,14 +2,19 @@ package pajeobject;
 
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
-import listeners.AllureListener;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-@ExtendWith(AllureListener.class)
 public class BaseTest {
+
+    protected static final Logger LOG = LoggerFactory.getLogger(BaseTest.class);
+
     @BeforeAll
-    public void setUp(){
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true));
+    public static void setUp() {
+        LOG.info("LOGGER");
+        SelenideLogger
+                .addListener("AllureSelenide",
+                        new AllureSelenide().screenshots(true).savePageSource(true));
     }
 }

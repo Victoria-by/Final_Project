@@ -1,8 +1,11 @@
 package pajeobject;
 
+import io.qameta.allure.Description;
+import listeners.AllureListener;
 import navigation.OnlinerNavigation;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import pageobject.CatalogPage;
 
 import java.util.Arrays;
@@ -10,26 +13,24 @@ import java.util.List;
 
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
-public class CatalogPageTest {
+@ExtendWith(AllureListener.class)
+public class CatalogPageTest extends BaseTest {
     private static final List<String> SECTIONS_LIST = Arrays.asList("Электроника", "Компьютеры и сети", "Бытовая техника",
             "Стройка и ремонт", "Дом и сад", "Авто и мото", "Красота и спорт", "Детям и мамам", "Работа и офис", "Еда");
-    private static CatalogPage catalogpage = new CatalogPage();
+    private static CatalogPage catalogpage;
 
-    @BeforeClass
+    @BeforeAll
+    @Description("Navigate to Onliner and click on 'Catalog' tab")
     public static void navigateToOnlinerClickOnCatalogLink() {
         catalogpage = OnlinerNavigation.navigateToOnlinerHomePage()
                 .clickOnNavigationHeaderLink("Каталог");
     }
 
     @Test
+    @Description("Test section contains titles")
     public void testPageSectionsTitlesContainSectionList() {
-        List<String> sectionsTitles = catalogpage.catalogLinks();
-        assertThat(isPageSectionsTitlesContainSectionList(sectionsTitles))
+        assertThat(catalogpage.getCatalogLinks())
                 .as("Page sections don't contain section list")
-                .isTrue();
-    }
-
-    public boolean isPageSectionsTitlesContainSectionList(List<String> sectionsTitles) {
-        return sectionsTitles.containsAll(SECTIONS_LIST);
+                .containsAll(SECTIONS_LIST);
     }
 }

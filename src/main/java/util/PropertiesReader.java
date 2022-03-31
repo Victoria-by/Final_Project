@@ -1,5 +1,8 @@
 package util;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -7,6 +10,7 @@ import java.net.URL;
 import java.util.Properties;
 
 public class PropertiesReader {
+    protected static final Logger LOG = LoggerFactory.getLogger(PropertiesReader.class);
 
     public static URL getURL(String url) {
         try (InputStream input = new FileInputStream("src/main/resources/apps.properties")) {
@@ -15,7 +19,7 @@ public class PropertiesReader {
             String urlAsString = appProps.getProperty(url);
             return new URL(urlAsString);
         } catch (IOException ex) {
-            System.out.println("check apps.properties directory");
+            LOG.error("Check directory to the properties file");
             ex.printStackTrace();
             return null;
         }

@@ -1,4 +1,39 @@
 -------------------------------------------------------------------------------
 Test set: pajeobject.AccessoriesPageTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.849 s - in pajeobject.AccessoriesPageTest
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 39.785 s <<< FAILURE! - in pajeobject.AccessoriesPageTest
+testShouldBeFailed  Time elapsed: 1.231 s  <<< FAILURE!
+java.lang.AssertionError: 
+[Not all products contain price] 
+Expecting no elements of:
+  ["1,626 товаров
+от 118,78 р.",
+    "1,146 товаров
+от 54,78 р.",
+    "1,654 товара
+от 133,54 р.",
+    "4,325 товаров
+от 34,66 р.",
+    "3,115 товаров
+от 2,00 р.",
+    "3,070 товаров
+от 61,70 р.",
+    "1,093 товара
+от 49,07 р.",
+    "2,702 товара
+от 27,56 р.",
+    "1,998 товаров
+от 37,23 р.",
+    "85 товаров
+от 10,95 р.",
+    "427 товаров
+от 11,15 р.",
+    "137 товаров
+от 48,35 р.",
+    "29 товаров
+от 50,26 р."]
+to match given predicate but this element did:
+  "1,626 товаров
+от 118,78 р."
+	at pajeobject.AccessoriesPageTest.testShouldBeFailed(AccessoriesPageTest.java:55)
+

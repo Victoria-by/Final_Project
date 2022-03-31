@@ -1,10 +1,11 @@
 package pageobject;
 
-import com.codeborne.selenide.CollectionCondition;
 import framework.BasePage;
+import io.qameta.allure.Step;
 
 import java.util.List;
 
+import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
 import static com.codeborne.selenide.Selenide.$$x;
 
 public class AccessoriesPage extends BasePage {
@@ -18,12 +19,14 @@ public class AccessoriesPage extends BasePage {
                     "[@class='catalog-navigation-list__dropdown']//span" +
                     "//*[contains(@class, 'catalog-navigation-list__dropdown-title')]";
 
-    public List<String> findProductsNames() {
-        return $$x(PRODUCTS_NAMES_LINK).shouldHave(CollectionCondition.sizeGreaterThan(0)).texts();
+    @Step("Get products names")
+    public List<String> getProductsNames() {
+        return $$x(PRODUCTS_NAMES_LINK).shouldHave(sizeGreaterThan(0)).texts();
     }
 
-    public List<String> findProductsDescription() {
-        return $$x(PRODUCTS_DESCRIPTIONS_LINK).shouldHave(CollectionCondition.sizeGreaterThan(0)).texts();
+    @Step("Get products descriptions")
+    public List<String> getProductsDescription() {
+        return $$x(PRODUCTS_DESCRIPTIONS_LINK).shouldHave(sizeGreaterThan(0)).texts();
     }
 }
 

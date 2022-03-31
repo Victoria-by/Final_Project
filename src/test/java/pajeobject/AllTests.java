@@ -1,12 +1,10 @@
 package pajeobject;
 
-import org.junit.runner.RunWith;
-import org.junit.runners.Suite;
+import org.junit.platform.suite.api.SelectClasses;
 
-@RunWith(Suite.class)
-@Suite.SuiteClasses({
+@SelectClasses({
         CatalogPageTest.class,
         ComputersAndNetworksPageTest.class,
         AccessoriesPageTest.class})
-public class AllTests extends BaseTest{
+public class AllTests {
 }
