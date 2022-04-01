@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: functional.pageobject.AccessoriesPageTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.529 s <<< FAILURE! - in functional.pageobject.AccessoriesPageTest
-testShouldBeFailed  Time elapsed: 1.152 s  <<< FAILURE!
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.894 s <<< FAILURE! - in functional.pageobject.AccessoriesPageTest
+testShouldBeFailed  Time elapsed: 1.063 s  <<< FAILURE!
 java.lang.AssertionError: 
 [Not all products contain price] 
 Expecting no elements of:

@@ -21,7 +21,7 @@ public class ProductServiceTest {
     }
 
     @Test
-    @Description("Test products names of type 'Rolls' contain prefix 'Rolls'")
+    @Description("Test products names of type 'Роллы' contain prefix 'Роллы'")
     public void testProductNamesOfTypeRollsContainsPrefixRolls() {
         assertThat(productsService.getNamePrefixes())
                 .as("Not every name_prefix contains text 'Роллы' ")

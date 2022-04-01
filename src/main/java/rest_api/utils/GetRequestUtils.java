@@ -1,5 +1,6 @@
 package rest_api.utils;
 
+import io.qameta.allure.Step;
 import io.restassured.response.ResponseBody;
 import org.apache.commons.collections4.MapUtils;
 import org.apache.http.HttpStatus;
@@ -12,6 +13,7 @@ public class GetRequestUtils {
     private GetRequestUtils() {
     }
 
+    @Step("Make request and get response body")
     public static ResponseBody makeRequestAndGetResponseBody(String endpoint, Map<String, Object> headers,
                                                              Map<String, Object> params) {
         return given()
