@@ -2,9 +2,13 @@ C:\Users\HUAWEI\IdeaProjects\FinalProject\src\main\java\framework\SelenideWebDri
 C:\Users\HUAWEI\IdeaProjects\FinalProject\src\main\java\framework\drivertype\FirefoxDriverCreator.java
 C:\Users\HUAWEI\IdeaProjects\FinalProject\src\main\java\navigation\OnlinerNavigation.java
 C:\Users\HUAWEI\IdeaProjects\FinalProject\src\main\java\framework\drivertype\ChromeDriverCreator.java
+C:\Users\HUAWEI\IdeaProjects\FinalProject\src\main\java\rest_api\model\Product.java
 C:\Users\HUAWEI\IdeaProjects\FinalProject\src\main\java\pageobject\HomePage.java
 C:\Users\HUAWEI\IdeaProjects\FinalProject\src\main\java\framework\factory\RemoteWebDriverCreator.java
 C:\Users\HUAWEI\IdeaProjects\FinalProject\src\main\java\pageobject\CatalogPage.java
+C:\Users\HUAWEI\IdeaProjects\FinalProject\src\main\java\rest_api\utils\ResponseBodyUtils.java
+C:\Users\HUAWEI\IdeaProjects\FinalProject\src\main\java\rest_api\service\ProductsService.java
+C:\Users\HUAWEI\IdeaProjects\FinalProject\src\main\java\rest_api\utils\GetRequestUtils.java
 C:\Users\HUAWEI\IdeaProjects\FinalProject\src\main\java\framework\drivertype\WebDriverCreator.java
 C:\Users\HUAWEI\IdeaProjects\FinalProject\src\main\java\pageobject\AccessoriesPage.java
 C:\Users\HUAWEI\IdeaProjects\FinalProject\src\main\java\pageobject\ComputersAndNetworksPage.java
