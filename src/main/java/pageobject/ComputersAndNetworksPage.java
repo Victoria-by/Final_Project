@@ -2,6 +2,7 @@ package pageobject;
 
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.ElementsCollection;
 import framework.BasePage;
 import io.qameta.allure.Step;
 
@@ -16,18 +17,18 @@ public class ComputersAndNetworksPage extends BasePage {
     private static final String ACCESSORIES_LINK_XPATH_PATTERN =
             "//*[@class='catalog-navigation-list__aside-title' and contains(text(), '%s') " +
                     "and not (contains(text(), 'Комплектующие для'))]";
-    private static final String TABS_LIST_COMPUTERS_NETWORKS_LINK =
-            "//*[@class = 'catalog-navigation-list__aside catalog-navigation-list__aside_active']" +
+    private final ElementsCollection computersAndNetworksLinks =
+            $$x("//*[@class = 'catalog-navigation-list__aside catalog-navigation-list__aside_active']" +
                     "/div[@class = 'catalog-navigation-list__aside-list']" +
                     "/div[contains(@class, 'catalog-navigation-list__aside-item')]" +
-                    "/div[contains(@class, 'catalog-navigation-list__aside-title')]";
+                    "/div[contains(@class, 'catalog-navigation-list__aside-title')]");
     private static final String NOTEBOOKS_COMPUTERS_MONITORS_LINK =
             "//*[contains(@class, 'catalog-navigation-list__aside-title')" +
                     " and contains(text(), ' Ноутбуки, компьютеры, мониторы')]";
 
     @Step("Get texts from computers and networks links")
     public List<String> getComputersAndNetworksLinks() {
-        return $$x(TABS_LIST_COMPUTERS_NETWORKS_LINK).shouldHave(CollectionCondition.sizeGreaterThan(0)).texts();
+        return computersAndNetworksLinks.shouldHave(CollectionCondition.sizeGreaterThan(0)).texts();
     }
 
     @Step("Click on tab {linkContains}")

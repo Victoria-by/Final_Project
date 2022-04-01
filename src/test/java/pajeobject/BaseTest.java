@@ -7,12 +7,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class BaseTest {
-
     protected static final Logger LOG = LoggerFactory.getLogger(BaseTest.class);
 
     @BeforeAll
     public static void setUp() {
-        LOG.info("LOGGER");
+  //      LOG.info("LOGGER");
         SelenideLogger
                 .addListener("AllureSelenide",
                         new AllureSelenide().screenshots(true).savePageSource(true));

@@ -24,4 +24,16 @@ public class PropertiesReader {
             return null;
         }
     }
+
+    public static String getProperty(String property){
+        try (InputStream input = new FileInputStream("src/main/resources/apps.properties")) {
+            Properties appProps = new Properties();
+            appProps.load(input);
+            return appProps.getProperty(property);
+        } catch (IOException ex) {
+            LOG.error("Check directory to the properties file");
+            ex.printStackTrace();
+            return null;
+        }
+    }
 }

@@ -2,6 +2,7 @@ package pageobject;
 
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.ElementsCollection;
 import framework.BasePage;
 import io.qameta.allure.Step;
 
@@ -13,13 +14,14 @@ import static java.lang.String.format;
 import static java.time.Duration.ofSeconds;
 
 public class CatalogPage extends BasePage {
-    private static final String TAB_LIST_CATALOG_LINK = "//*[@class = 'catalog-navigation-classifier__item ']";
+    private final ElementsCollection catalogLinks =
+            $$x("//*[@class = 'catalog-navigation-classifier__item ']");
     private static final String COMPUTERS_NETWORKS_LINK_XPATH_PATTERN =
             "//*[@class = 'catalog-navigation-classifier__item-title-wrapper' and contains(text(), '%s')]";
 
     @Step("Get texts from catalog links")
     public List<String> getCatalogLinks() {
-        return $$x(TAB_LIST_CATALOG_LINK).shouldHave(CollectionCondition.sizeGreaterThan(0)).texts();
+        return catalogLinks.shouldHave(CollectionCondition.sizeGreaterThan(0)).texts();
     }
 
     @Step("Click on tab {linkContains}")
