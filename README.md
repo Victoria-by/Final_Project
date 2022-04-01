@@ -20,8 +20,8 @@
 тестов удаленно на Selenium Grid. (RemoteWebDriverCreator)
 
 REST-ASSURED:
-1) Перейти на страницу https://catalog.onliner.by/sushivesla
-Воспроизвести запрос на эндпоинт https://catalog.onliner.by/sdapi/catalog.api/search/sushivesla
+1) Перейти на страницу https://catalog.runner.by/sushivesla
+Воспроизвести запрос на эндпоинт https://catalog.runner.by/sdapi/catalog.api/search/sushivesla
 с помощью Rest Assured
 Полученный ответ необходимо конвертировать в список объектов Product.
 Каждый объект содержит поля:

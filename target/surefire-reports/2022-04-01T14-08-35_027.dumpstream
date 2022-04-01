@@ -1,6 +1,0 @@
-# Created at 2022-04-01T14:08:37.341
-���. 01, 2022 2:08:37 PM org.junit.platform.launcher.core.EngineIdValidator validate
-
-# Created at 2022-04-01T14:08:37.343
-WARNING: Third-party TestEngine implementations are forbidden to use the reserved 'junit-' prefix for their ID: 'junit-platform-suite'
-

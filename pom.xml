@@ -19,7 +19,7 @@
         <firefox.driver.path>${project.basedir}/src/test/resources/drivers/firefox.exe</firefox.driver.path>
         <chrome.driver.path>${project.basedir}/src/test/resources/drivers/chromedriver.exe</chrome.driver.path>
         <aspectj.version>1.9.8</aspectj.version>
-        <allure.version>2.13.6</allure.version>
+        <allure.version>2.14.0</allure.version>
         <jackson-annotations.version>2.13.1</jackson-annotations.version>
         <jackson-databind.version>2.13.1</jackson-databind.version>
         <gson.version>2.9.0</gson.version>
@@ -62,7 +62,7 @@
             <plugin>
                 <groupId>io.qameta.allure</groupId>
                 <artifactId>allure-maven</artifactId>
-                <version>2.11.2</version>
+                <version>2.10.0</version>
                 <configuration>
                     <reportVersion>${allure.version}</reportVersion>
                 </configuration>

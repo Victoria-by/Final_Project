@@ -10,7 +10,7 @@ import java.util.Map;
 import static rest_api.utils.GetRequestUtils.makeRequestAndGetResponseBody;
 import static rest_api.utils.ResponseBodyUtils.getListStringByJsonPath;
 import static rest_api.utils.ResponseBodyUtils.getObjectsByJsonPath;
-import static util.PropertiesReader.getProperty;
+import static functional.util.PropertiesReader.getProperty;
 
 public class ProductsService {
 

@@ -1,8 +1,8 @@
-pajeobject\CatalogPageTest.class
-pajeobject\BaseTest.class
+runner\AllTests.class
+functional\BaseTest.class
+functional\pageobject\AccessoriesPageTest.class
 listeners\AllureListener.class
-pajeobject\ComputersAndNetworksPageTest.class
-pajeobject\AccessoriesPageTest.class
-pajeobject\AllTests.class
+functional\pageobject\ComputersAndNetworksPageTest.class
 rest_api\service\ProductServiceTest.class
+functional\pageobject\CatalogPageTest.class
 utils\ScreenshotUtils.class
