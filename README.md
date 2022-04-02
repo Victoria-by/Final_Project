@@ -1,3 +1,4 @@
+functional:
 Реализовать 3 тест кейса для онлайнера
 
 1)открыть раздел каталог, проверить присутствие секций "Электроника", "Компьютеры и сети","Бытовая техника",
@@ -19,9 +20,9 @@
 +Сконфигурировать Selenium Grid и ноду, во фреймворке должна быть возможность запуска
 тестов удаленно на Selenium Grid. (RemoteWebDriverCreator)
 
-REST-ASSURED:
+rest-api:
 1) Перейти на страницу https://catalog.runner.by/sushivesla
-Воспроизвести запрос на эндпоинт https://catalog.runner.by/sdapi/catalog.api/search/sushivesla
+Воспроизвести запрос на эндпоинт https://catalog.onliner.by/sdapi/catalog.api/search/sushivesla
 с помощью Rest Assured
 Полученный ответ необходимо конвертировать в список объектов Product.
 Каждый объект содержит поля:

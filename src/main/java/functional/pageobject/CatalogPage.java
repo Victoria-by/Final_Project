@@ -15,7 +15,7 @@ import static java.time.Duration.ofSeconds;
 public class CatalogPage extends BasePage {
     private final ElementsCollection catalogLinks =
             $$x("//*[@class = 'catalog-navigation-classifier__item ']");
-    private static final String COMPUTERS_NETWORKS_LINK_XPATH_PATTERN =
+    private static final String CATALOG_SECTION_LINK_XPATH_PATTERN =
             "//*[@class = 'catalog-navigation-classifier__item-title-wrapper' and contains(text(), '%s')]";
 
     @Step("Get texts from catalog links")
@@ -24,9 +24,8 @@ public class CatalogPage extends BasePage {
     }
 
     @Step("Click on tab {linkContains}")
-    public ComputersAndNetworksPage clickOnNavigationCatalogTabLink(String linkContains) {
-        $x(format(COMPUTERS_NETWORKS_LINK_XPATH_PATTERN, linkContains))
+    public void clickOnCatalogSectionLink(String linkContains) {
+        $x(format(CATALOG_SECTION_LINK_XPATH_PATTERN, linkContains))
                 .shouldBe(Condition.visible, ofSeconds(20)).click();
-        return new ComputersAndNetworksPage();
     }
 }

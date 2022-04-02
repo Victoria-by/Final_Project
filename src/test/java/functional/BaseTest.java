@@ -11,7 +11,6 @@ public class BaseTest {
 
     @BeforeAll
     public static void setUp() {
-  //      LOG.info("LOGGER");
         SelenideLogger
                 .addListener("AllureSelenide",
                         new AllureSelenide().screenshots(true).savePageSource(true));

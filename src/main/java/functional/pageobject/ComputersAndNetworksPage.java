@@ -14,7 +14,7 @@ import static java.lang.String.format;
 import static java.time.Duration.ofSeconds;
 
 public class ComputersAndNetworksPage extends BasePage {
-    private static final String ACCESSORIES_LINK_XPATH_PATTERN =
+    private static final String COMPUTERS_AND_NETWORKS_TAB_LINK_XPATH_PATTERN =
             "//*[@class='catalog-navigation-list__aside-title' and contains(text(), '%s') " +
                     "and not (contains(text(), 'Комплектующие для'))]";
     private final ElementsCollection computersAndNetworksLinks =
@@ -32,14 +32,14 @@ public class ComputersAndNetworksPage extends BasePage {
     }
 
     @Step("Click on tab {linkContains}")
-    public AccessoriesPage clickOnNavigationComputersAndNetworksTabLink(String linkContains) {
-        $x(format(ACCESSORIES_LINK_XPATH_PATTERN, linkContains))
+    public AccessoriesPage clickOnComputersAndNetworksTabLink(String linkContains) {
+        $x(format(COMPUTERS_AND_NETWORKS_TAB_LINK_XPATH_PATTERN, linkContains))
                 .shouldBe(Condition.visible, ofSeconds(20)).click();
         return new AccessoriesPage();
     }
 
-    @Step("move mouse to the first tab of section")
-    public ComputersAndNetworksPage mouseOver() {
+    @Step("Click on the first tab of section")
+    public ComputersAndNetworksPage clickOnTheFirstTabOfSection() {
         $x(NOTEBOOKS_COMPUTERS_MONITORS_LINK).shouldBe(Condition.visible, ofSeconds(20)).click();
         return this;
     }

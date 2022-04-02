@@ -9,6 +9,7 @@ functional\framework\drivertype\ChromeDriverCreator.class
 functional\pageobject\CatalogPage.class
 functional\util\PropertiesReader.class
 rest_api\model\Product.class
+functional\pageobject\FoodPage.class
 functional\framework\BasePage.class
 functional\framework\SelenideWebDriverConfigurator.class
 functional\navigation\OnlinerNavigation.class

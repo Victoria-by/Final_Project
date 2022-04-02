@@ -4,6 +4,7 @@
         <Console name="ConsoleAppender" target="SYSTEM_OUT">
             <PatternLayout
                     pattern="%d [%t] %-5level %logger{36} - %msg%n%throwable"/>
+            <follow>true</follow>
         </Console>
     </Appenders>
     <Loggers>

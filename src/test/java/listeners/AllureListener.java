@@ -13,12 +13,12 @@ public class AllureListener implements TestWatcher {
     @Override
     public void testAborted(ExtensionContext context, Throwable cause) {
         takeScreenshotAndAttachToAllureReport();
-    //    LOG.info("Test Aborted");
+        LOG.info("Test Aborted");
     }
 
     @Override
     public void testFailed(ExtensionContext context, Throwable cause) {
         takeScreenshotAndAttachToAllureReport();
-   //     LOG.info("Test Failed");
+        LOG.info("Test Failed");
     }
 }

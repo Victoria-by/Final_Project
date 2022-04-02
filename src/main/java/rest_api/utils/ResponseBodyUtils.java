@@ -9,12 +9,14 @@ public class ResponseBodyUtils {
     private ResponseBodyUtils() {
 
     }
-@Step("Get objects by jsonPath")
+
+    @Step("Get objects by jsonPath")
     public static <T> List<T> getObjectsByJsonPath(ResponseBody responseBody, String jsonPath, Class<T> genericType) {
         return responseBody
                 .jsonPath()
                 .getList(jsonPath, genericType);
     }
+
     @Step("Get list string by jsonPath")
     public static List<String> getListStringByJsonPath(ResponseBody responseBody, String jsonPath) {
         return responseBody

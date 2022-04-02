@@ -7,11 +7,11 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import javax.annotation.Nonnull;
 import java.net.URL;
 
-import static functional.util.PropertiesReader.getProperty;
-import static functional.util.PropertiesReader.getURL;
+import static functional.util.PropertiesReader.*;
 
 public class RemoteWebDriverCreator implements WebDriverProvider {
 
+    @Nonnull
     @Override
     public RemoteWebDriver createDriver(@Nonnull DesiredCapabilities desiredCapabilities) {
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -19,11 +19,11 @@ public class RemoteWebDriverCreator implements WebDriverProvider {
         if (driverType != null) {
             capabilities.setBrowserName(driverType);
         } else {
-            capabilities.setBrowserName(getProperty("driverType"));
+            capabilities.setBrowserName(getConfigProperty("driverType"));
         }
         capabilities.setCapability("os", "Windows");
         capabilities.setCapability("os_version", "10");
-        URL gridURL = getURL("gridUrl");
+        URL gridURL = getConfigURL("gridUrl");
         return new RemoteWebDriver(gridURL, capabilities);
     }
 }

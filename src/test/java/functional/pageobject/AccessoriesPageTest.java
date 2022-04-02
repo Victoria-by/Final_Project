@@ -1,9 +1,11 @@
 package functional.pageobject;
 
-import io.qameta.allure.Description;
-import listeners.AllureListener;
-import functional.navigation.OnlinerNavigation;
 import functional.BaseTest;
+import functional.navigation.OnlinerNavigation;
+import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
+import listeners.AllureListener;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -11,20 +13,24 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
 @ExtendWith(AllureListener.class)
+@Feature("Search across AccessoriesPage")
 public class AccessoriesPageTest extends BaseTest {
+
     private static AccessoriesPage accessoriesPage;
 
     @BeforeAll
     @Description("Navigate to Onliner and click on 'Accessories' tab")
     public static void navigateToOnlinerFindAccessoriesTabAndClick() {
-        accessoriesPage = OnlinerNavigation.navigateToOnlinerHomePage()
+        OnlinerNavigation.navigateToOnlinerHomePage()
                 .clickOnNavigationHeaderLink("Каталог")
-                .clickOnNavigationCatalogTabLink("Компьютеры")
-                .clickOnNavigationComputersAndNetworksTabLink("Комплектующие");
+                .clickOnCatalogSectionLink("Компьютеры");
+        accessoriesPage = new ComputersAndNetworksPage()
+                .clickOnComputersAndNetworksTabLink("Комплектующие");
     }
 
     @Test
     @Description("Test all elements contain name")
+    @Story("Search across AccessoriesPage tab elements")
     public void testAllElementsContainName() {
         assertThat(accessoriesPage.getProductsNames())
                 .as("Not all products contain name")
@@ -33,6 +39,7 @@ public class AccessoriesPageTest extends BaseTest {
 
     @Test
     @Description("Test all elements contain quantity")
+    @Story("Search across AccessoriesPage tab elements")
     public void testAllElementsContainQuantity() {
         assertThat(accessoriesPage.getProductsDescription())
                 .as("Not all products contain quantity")
@@ -41,6 +48,7 @@ public class AccessoriesPageTest extends BaseTest {
 
     @Test
     @Description("Test all elements contain price")
+    @Story("Search across AccessoriesPage tab elements")
     public void testAllElementsContainPrice() {
         assertThat(accessoriesPage.getProductsDescription())
                 .as("Not all products contain price")
@@ -49,7 +57,8 @@ public class AccessoriesPageTest extends BaseTest {
 
     @Test
     @Description("Test should be failed")
-    public void testShouldBeFailed() {
+ //   @Story("Search across AccessoriesPage tab elements")
+    public void testNoElementsContainPrice() {
         assertThat(accessoriesPage.getProductsDescription())
                 .as("Not all products contain price")
                 .noneMatch(e -> e.contains("р."));
