@@ -1,12 +1,12 @@
 functional\pageobject\ComputersAndNetworksPage.class
 functional\framework\factory\LocalWebDriverCreator.class
 rest_api\utils\ResponseBodyUtils.class
-functional\framework\drivertype\FirefoxDriverCreator.class
 functional\framework\drivertype\WebDriverCreator.class
 rest_api\service\ProductsService.class
 rest_api\utils\GetRequestUtils.class
 functional\framework\drivertype\ChromeDriverCreator.class
 functional\pageobject\CatalogPage.class
+functional\framework\drivertype\EdgeDriverCreator.class
 functional\util\PropertiesReader.class
 rest_api\model\Product.class
 functional\pageobject\FoodPage.class

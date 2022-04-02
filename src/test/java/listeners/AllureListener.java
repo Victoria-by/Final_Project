@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
 import static utils.ScreenshotUtils.takeScreenshotAndAttachToAllureReport;
 
 public class AllureListener implements TestWatcher {
-    protected static final Logger LOG = LoggerFactory.getLogger(AllureListener.class);
+    private static final Logger LOG = LoggerFactory.getLogger(AllureListener.class);
 
     @Override
     public void testAborted(ExtensionContext context, Throwable cause) {

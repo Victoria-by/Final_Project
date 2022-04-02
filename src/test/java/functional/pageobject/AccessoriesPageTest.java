@@ -35,6 +35,7 @@ public class AccessoriesPageTest extends BaseTest {
         assertThat(accessoriesPage.getProductsNames())
                 .as("Not all products contain name")
                 .allMatch(e -> !e.isEmpty());
+        LOG.info("Products names :" + accessoriesPage.getProductsNames().toString());
     }
 
     @Test
@@ -57,7 +58,7 @@ public class AccessoriesPageTest extends BaseTest {
 
     @Test
     @Description("Test should be failed")
- //   @Story("Search across AccessoriesPage tab elements")
+    @Story("Search across AccessoriesPage tab elements")
     public void testNoElementsContainPrice() {
         assertThat(accessoriesPage.getProductsDescription())
                 .as("Not all products contain price")

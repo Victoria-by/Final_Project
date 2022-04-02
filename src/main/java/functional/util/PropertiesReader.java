@@ -11,6 +11,7 @@ import java.net.URL;
 import java.util.Properties;
 
 public class PropertiesReader {
+
     private static final String CONFIG_PROPERTIES_PATH = "src/main/resources/config.properties";
     private static final String ENDPOINTS_PROPERTIES_PATH = "src/main/resources/endPoints.properties";
     protected static final Logger LOG = LoggerFactory.getLogger(PropertiesReader.class);

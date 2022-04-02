@@ -15,7 +15,7 @@
         <junit.platform.version>1.8.2</junit.platform.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <selenuim.version>3.141.59</selenuim.version>
-        <firefox.driver.path>${project.basedir}/src/test/resources/drivers/firefox.exe</firefox.driver.path>
+        <edge.driver.path>${project.basedir}/src/test/resources/drivers/msedgedriver.exe</edge.driver.path>
         <chrome.driver.path>${project.basedir}/src/test/resources/drivers/chromedriver.exe</chrome.driver.path>
         <aspectj.version>1.9.8</aspectj.version>
         <allure.version>2.14.0</allure.version>
@@ -36,7 +36,7 @@
                 <configuration>
                     <systemPropertyVariables>
                         <webdriver.chrome.driver>${chrome.driver.path}</webdriver.chrome.driver>
-                        <webdriver.firefox.driver>${firefox.driver.path}</webdriver.firefox.driver>
+                        <webdriver.edge.driver>${edge.driver.path}</webdriver.edge.driver>
                     </systemPropertyVariables>
                     <testFailureIgnore>false</testFailureIgnore>
                     <argLine>
@@ -197,6 +197,12 @@
             <artifactId>assertj-core</artifactId>
             <version>3.22.0</version>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.microsoft.edge</groupId>
+            <artifactId>msedge-selenium-tools-java</artifactId>
+            <version>3.141.0</version>
         </dependency>
     </dependencies>
 </project>

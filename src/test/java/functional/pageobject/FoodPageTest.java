@@ -36,5 +36,6 @@ public class FoodPageTest extends BaseTest {
         assertThat(foodPage.getProductsNames())
                 .as("Products names don't contain definite name")
                 .anyMatch(e -> e.contains(NAME_SHOULD_BE_PRESENT));
+        LOG.info("Products names: " + foodPage.getProductsNames().toString());
     }
 }

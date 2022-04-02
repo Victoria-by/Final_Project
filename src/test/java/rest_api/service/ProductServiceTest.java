@@ -11,7 +11,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Tag("Rest")
 public class ProductServiceTest {
 
-    protected static final Logger LOG = LoggerFactory.getLogger(ProductServiceTest.class);
+    private static final Logger LOG = LoggerFactory.getLogger(ProductServiceTest.class);
     private final ProductsService productsService = new ProductsService();
 
     @Test
@@ -31,6 +31,5 @@ public class ProductServiceTest {
         assertThat(productsService.getNamePrefixes())
                 .as("Not every name_prefix contains text 'Роллы' ")
                 .allMatch(element -> element.contains("Роллы"));
-        LOG.info(productsService.getNamePrefixes().toString());
     }
 }

@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class ScreenshotUtils {
+
     protected static final Logger LOG = LoggerFactory.getLogger(ScreenshotUtils.class);
 
     private ScreenshotUtils() {
@@ -20,7 +21,7 @@ public class ScreenshotUtils {
             File screenshotAs = Screenshots.takeScreenShotAsFile();
             Allure.addAttachment("Screenshot", FileUtils.openInputStream(screenshotAs));
         } catch (IOException e) {
-   //         LOG.error("Error creating screenshot");
+            LOG.error("Error creating screenshot");
         }
     }
 }

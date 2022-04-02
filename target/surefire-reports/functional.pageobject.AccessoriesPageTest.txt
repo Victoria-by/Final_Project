@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: functional.pageobject.AccessoriesPageTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 38.339 s <<< FAILURE! - in functional.pageobject.AccessoriesPageTest
-testNoElementsContainPrice  Time elapsed: 0.443 s  <<< FAILURE!
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 21.703 s <<< FAILURE! - in functional.pageobject.AccessoriesPageTest
+testNoElementsContainPrice  Time elapsed: 0.482 s  <<< FAILURE!
 java.lang.AssertionError: 
 [Not all products contain price] 
 Expecting no elements of:
@@ -19,7 +19,7 @@ Expecting no elements of:
     "3,069 товаров
 от 70,60 р.",
     "1,096 товаров
-от 42,61 р.",
+от 42,52 р.",
     "2,703 товара
 от 30,07 р.",
     "1,998 товаров
@@ -35,5 +35,5 @@ Expecting no elements of:
 to match given predicate but this element did:
   "1,628 товаров
 от 117,42 р."
-	at functional.pageobject.AccessoriesPageTest.testNoElementsContainPrice(AccessoriesPageTest.java:64)
+	at functional.pageobject.AccessoriesPageTest.testNoElementsContainPrice(AccessoriesPageTest.java:65)
 
