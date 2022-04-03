@@ -7,6 +7,7 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import listeners.AllureListener;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
@@ -34,6 +35,7 @@ public class ComputersAndNetworksPageTest extends BaseTest {
     }
 
     @Test
+    @Tag("functional")
     @Description("Test section contains tab list")
     @Story("Search across ComputersAndNetworks tabs")
     public void testSectionContainsTabsList() {

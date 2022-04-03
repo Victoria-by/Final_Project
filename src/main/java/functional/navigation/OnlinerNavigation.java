@@ -6,7 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import static com.codeborne.selenide.Selenide.open;
-import static functional.util.PropertiesReader.getConfigURL;
+import static util.PropertiesReader.getConfigURL;
 
 public class OnlinerNavigation {
 

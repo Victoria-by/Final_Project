@@ -7,6 +7,7 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import listeners.AllureListener;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
@@ -29,6 +30,7 @@ public class AccessoriesPageTest extends BaseTest {
     }
 
     @Test
+    @Tag("functional")
     @Description("Test all elements contain name")
     @Story("Search across AccessoriesPage tab elements")
     public void testAllElementsContainName() {
@@ -39,6 +41,7 @@ public class AccessoriesPageTest extends BaseTest {
     }
 
     @Test
+    @Tag("functional")
     @Description("Test all elements contain quantity")
     @Story("Search across AccessoriesPage tab elements")
     public void testAllElementsContainQuantity() {
@@ -48,6 +51,7 @@ public class AccessoriesPageTest extends BaseTest {
     }
 
     @Test
+    @Tag("functional")
     @Description("Test all elements contain price")
     @Story("Search across AccessoriesPage tab elements")
     public void testAllElementsContainPrice() {
@@ -57,6 +61,7 @@ public class AccessoriesPageTest extends BaseTest {
     }
 
     @Test
+    @Tag("functional")
     @Description("Test should be failed")
     @Story("Search across AccessoriesPage tab elements")
     public void testNoElementsContainPrice() {

@@ -1,15 +1,16 @@
-C:\Users\HUAWEI\IdeaProjects\FinalProject\src\main\java\functional\util\PropertiesReader.java
 C:\Users\HUAWEI\IdeaProjects\FinalProject\src\main\java\rest_api\model\Product.java
 C:\Users\HUAWEI\IdeaProjects\FinalProject\src\main\java\functional\framework\drivertype\WebDriverCreator.java
 C:\Users\HUAWEI\IdeaProjects\FinalProject\src\main\java\functional\framework\SelenideWebDriverConfigurator.java
 C:\Users\HUAWEI\IdeaProjects\FinalProject\src\main\java\functional\framework\BasePage.java
 C:\Users\HUAWEI\IdeaProjects\FinalProject\src\main\java\functional\navigation\OnlinerNavigation.java
 C:\Users\HUAWEI\IdeaProjects\FinalProject\src\main\java\functional\framework\drivertype\ChromeDriverCreator.java
+C:\Users\HUAWEI\IdeaProjects\FinalProject\src\main\java\functional\framework\drivertype\FirefoxDriverCreator.java
 C:\Users\HUAWEI\IdeaProjects\FinalProject\src\main\java\rest_api\utils\ResponseBodyUtils.java
 C:\Users\HUAWEI\IdeaProjects\FinalProject\src\main\java\functional\framework\factory\RemoteWebDriverCreator.java
 C:\Users\HUAWEI\IdeaProjects\FinalProject\src\main\java\rest_api\service\ProductsService.java
 C:\Users\HUAWEI\IdeaProjects\FinalProject\src\main\java\rest_api\utils\GetRequestUtils.java
 C:\Users\HUAWEI\IdeaProjects\FinalProject\src\main\java\functional\framework\drivertype\EdgeDriverCreator.java
+C:\Users\HUAWEI\IdeaProjects\FinalProject\src\main\java\util\PropertiesReader.java
 C:\Users\HUAWEI\IdeaProjects\FinalProject\src\main\java\functional\pageobject\ComputersAndNetworksPage.java
 C:\Users\HUAWEI\IdeaProjects\FinalProject\src\main\java\functional\pageobject\HomePage.java
 C:\Users\HUAWEI\IdeaProjects\FinalProject\src\main\java\functional\pageobject\CatalogPage.java

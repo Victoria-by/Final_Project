@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: functional.pageobject.FoodPageTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.19 s - in functional.pageobject.FoodPageTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 4.265 s - in functional.pageobject.FoodPageTest

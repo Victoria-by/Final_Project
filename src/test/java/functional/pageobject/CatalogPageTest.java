@@ -7,6 +7,7 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import listeners.AllureListener;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
@@ -31,6 +32,7 @@ public class CatalogPageTest extends BaseTest {
     }
 
     @Test
+    @Tag("functional")
     @Description("Test sections contain definite values")
     @Story("Search across CatalogPage sections")
     public void testPageSectionsContainSectionList() {

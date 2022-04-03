@@ -17,6 +17,7 @@
         <selenuim.version>3.141.59</selenuim.version>
         <edge.driver.path>${project.basedir}/src/test/resources/drivers/msedgedriver.exe</edge.driver.path>
         <chrome.driver.path>${project.basedir}/src/test/resources/drivers/chromedriver.exe</chrome.driver.path>
+        <firefox.driver.path>${project.basedir}/src/test/resources/drivers/geckodriver.exe</firefox.driver.path>
         <aspectj.version>1.9.8</aspectj.version>
         <allure.version>2.14.0</allure.version>
         <jackson-annotations.version>2.13.1</jackson-annotations.version>
@@ -37,6 +38,7 @@
                     <systemPropertyVariables>
                         <webdriver.chrome.driver>${chrome.driver.path}</webdriver.chrome.driver>
                         <webdriver.edge.driver>${edge.driver.path}</webdriver.edge.driver>
+                        <webdriver.firefox.driver>${firefox.driver.path}</webdriver.firefox.driver>
                     </systemPropertyVariables>
                     <testFailureIgnore>false</testFailureIgnore>
                     <argLine>
@@ -203,6 +205,11 @@
             <groupId>com.microsoft.edge</groupId>
             <artifactId>msedge-selenium-tools-java</artifactId>
             <version>3.141.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.applitools</groupId>
+            <artifactId>eyes-selenium-java3</artifactId>
+            <version>3.212.1</version>
         </dependency>
     </dependencies>
 </project>

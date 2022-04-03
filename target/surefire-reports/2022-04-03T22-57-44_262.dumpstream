@@ -1,0 +1,12 @@
+# Created at 2022-04-03T22:57:50.046
+���. 03, 2022 10:57:49 PM org.junit.platform.launcher.core.EngineIdValidator validate
+
+# Created at 2022-04-03T22:57:50.049
+WARNING: Third-party TestEngine implementations are forbidden to use the reserved 'junit-' prefix for their ID: 'junit-platform-suite'
+
+# Created at 2022-04-03T22:57:55.388
+���. 03, 2022 10:57:55 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+
+# Created at 2022-04-03T22:57:55.390
+INFO: Detected dialect: W3C
+

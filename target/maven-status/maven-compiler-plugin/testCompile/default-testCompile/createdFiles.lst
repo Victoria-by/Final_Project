@@ -1,3 +1,4 @@
+visual\EyesTest.class
 functional\BaseTest.class
 functional\pageobject\AccessoriesPageTest.class
 runner\AllTestsSuite.class
@@ -7,3 +8,4 @@ rest_api\service\ProductServiceTest.class
 functional\pageobject\CatalogPageTest.class
 utils\ScreenshotUtils.class
 functional\pageobject\FoodPageTest.class
+visual\BaseEyesTest.class

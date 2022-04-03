@@ -3,6 +3,7 @@ package functional.framework.factory;
 import com.codeborne.selenide.WebDriverProvider;
 import functional.framework.drivertype.ChromeDriverCreator;
 import functional.framework.drivertype.EdgeDriverCreator;
+import functional.framework.drivertype.FirefoxDriverCreator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.slf4j.Logger;
@@ -18,11 +19,14 @@ public class LocalWebDriverCreator implements WebDriverProvider {
     public WebDriver createDriver(@Nonnull DesiredCapabilities desiredCapabilities) {
         String driverType = System.getProperty("driverType");
         switch (driverType) {
-            case "edge":
-                LOG.info("EdgeDriver was created");
+            case "MicrosoftEdge":
+                LOG.info("Local connection, EdgeDriver was created");
                 return new EdgeDriverCreator().create();
+            case "firefox":
+                LOG.info("Local connection, FirefoxDriver was created");
+                return new FirefoxDriverCreator().create();
             default:
-                LOG.info("ChromeDriver was created");
+                LOG.info("Local connection, ChromeDriver was created");
                 return new ChromeDriverCreator().create();
         }
     }
