@@ -3,20 +3,26 @@ package visual;
 import functional.navigation.OnlinerNavigation;
 import functional.pageobject.HomePage;
 import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
+import listeners.AllureListener;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
+@ExtendWith(AllureListener.class)
+@Feature("Tracking changes of Onliner Home Page and Catalog Page view")
 public class EyesTest extends BaseEyesTest {
 
     private final String appName = "Onliner";
     private static HomePage homePage;
 
     @BeforeEach
+    @Description("Navigate to Onliner")
     public void navigateToFoodPage() {
         homePage = new HomePage();
         OnlinerNavigation.navigateToOnlinerHomePage();

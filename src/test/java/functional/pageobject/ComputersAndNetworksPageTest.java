@@ -42,6 +42,5 @@ public class ComputersAndNetworksPageTest extends BaseTest {
         assertThat(computersAndNetworksPage.getComputersAndNetworksLinks())
                 .as("Page sections don't contain section list")
                 .containsAll(COMPUTERS_AND_NETWORKS_TABS_LIST);
-        LOG.info("ComputersAndNetworks sections: " + computersAndNetworksPage.getComputersAndNetworksLinks().toString());
     }
 }

@@ -1,27 +1,27 @@
 -------------------------------------------------------------------------------
 Test set: functional.pageobject.AccessoriesPageTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 14.024 s <<< FAILURE! - in functional.pageobject.AccessoriesPageTest
-testNoElementsContainPrice  Time elapsed: 0.849 s  <<< FAILURE!
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 14.238 s <<< FAILURE! - in functional.pageobject.AccessoriesPageTest
+testNoElementsContainPrice  Time elapsed: 0.531 s  <<< FAILURE!
 java.lang.AssertionError: 
 [Not all products contain price] 
 Expecting no elements of:
-  ["1,629 товаров
-от 117,42 р.",
+  ["1,631 товар
+от 106,18 р.",
     "1,143 товара
-от 53,63 р.",
-    "1,653 товара
+от 30,00 р.",
+    "1,652 товара
 от 127,44 р.",
-    "4,325 товаров
+    "4,324 товара
 от 34,66 р.",
     "3,113 товаров
 от 2,00 р.",
     "3,069 товаров
 от 70,60 р.",
-    "1,095 товаров
-от 42,52 р.",
+    "1,094 товара
+от 42,61 р.",
     "2,705 товаров
-от 28,86 р.",
+от 26,95 р.",
     "1,997 товаров
 от 36,51 р.",
     "84 товара
@@ -29,11 +29,11 @@ Expecting no elements of:
     "427 товаров
 от 11,15 р.",
     "136 товаров
-от 46,90 р.",
+от 46,50 р.",
     "29 товаров
 от 48,25 р."]
 to match given predicate but this element did:
-  "1,629 товаров
-от 117,42 р."
-	at functional.pageobject.AccessoriesPageTest.testNoElementsContainPrice(AccessoriesPageTest.java:70)
+  "1,631 товар
+от 106,18 р."
+	at functional.pageobject.AccessoriesPageTest.testNoElementsContainPrice(AccessoriesPageTest.java:69)
 

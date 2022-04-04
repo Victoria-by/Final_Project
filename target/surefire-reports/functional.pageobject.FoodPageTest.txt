@@ -1,4 +1,14 @@
 -------------------------------------------------------------------------------
 Test set: functional.pageobject.FoodPageTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 4.265 s - in functional.pageobject.FoodPageTest
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 21.258 s <<< FAILURE! - in functional.pageobject.FoodPageTest
+functional.pageobject.FoodPageTest  Time elapsed: 21.258 s  <<< FAILURE!
+com.codeborne.selenide.ex.ElementShould: 
+Element should be visible {By.xpath: //*[@class = 'catalog-navigation-list__aside-title' and contains(text(), 'Фермерские продукты')]}
+Element: '<div class="catalog-navigation-list__aside-title" displayed:false></div>'
+Actual value: visible:false
+Screenshot: file:/C:/Users/HUAWEI/IdeaProjects/FinalProject/build/reports/tests/1649069041574.0.png
+Page source: file:/C:/Users/HUAWEI/IdeaProjects/FinalProject/build/reports/tests/1649069041574.0.html
+Timeout: 20 s.
+	at functional.pageobject.FoodPageTest.createNewPage(FoodPageTest.java:39)
+

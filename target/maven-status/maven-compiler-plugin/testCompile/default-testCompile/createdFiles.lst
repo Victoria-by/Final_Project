@@ -1,7 +1,6 @@
 visual\EyesTest.class
 functional\BaseTest.class
 functional\pageobject\AccessoriesPageTest.class
-runner\AllTestsSuite.class
 listeners\AllureListener.class
 functional\pageobject\ComputersAndNetworksPageTest.class
 rest_api\service\ProductServiceTest.class

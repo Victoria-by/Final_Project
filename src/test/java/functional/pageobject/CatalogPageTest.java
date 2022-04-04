@@ -39,6 +39,5 @@ public class CatalogPageTest extends BaseTest {
         assertThat(catalogpage.getCatalogLinks())
                 .as("Page sections don't contain section list")
                 .containsAll(SECTIONS_LIST);
-        LOG.info("Catalog sections: " + catalogpage.getCatalogLinks().toString());
     }
 }

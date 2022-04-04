@@ -37,7 +37,6 @@ public class AccessoriesPageTest extends BaseTest {
         assertThat(accessoriesPage.getProductsNames())
                 .as("Not all products contain name")
                 .allMatch(e -> !e.isEmpty());
-        LOG.info("Products names :" + accessoriesPage.getProductsNames().toString());
     }
 
     @Test

@@ -14,7 +14,6 @@ import org.junit.jupiter.api.extension.ExtendWith;
 
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
-
 @ExtendWith(AllureListener.class)
 @Feature("Search across FoodPage")
 public class FoodPageTest extends BaseTest {
@@ -41,6 +40,5 @@ public class FoodPageTest extends BaseTest {
         assertThat(foodPage.getProductsNames())
                 .as("Products names don't contain definite name")
                 .anyMatch(e -> e.contains(NAME_SHOULD_BE_PRESENT));
-        LOG.info("Products names: " + foodPage.getProductsNames().toString());
     }
 }
